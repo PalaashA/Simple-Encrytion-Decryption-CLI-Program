@@ -15,7 +15,7 @@ int main()
     int i,j=0,k,key=0;
     int password,varInput;
 
-    //Program starts:
+    //Program starts:	
     cout<<"Welcome to the Program!"<<endl<<"Please input password:";
     cin>>password;
 
@@ -35,9 +35,10 @@ int main()
 			}
 			else{
 
-            //Encryption Block:
+            //Encryption Block:				
             cout<<"Welcome to Encryption Block"<<endl;
-            //Input data to File:
+				
+            //Input data to File:				
             cout<<"Enter name of file:";
             cin>>name;
              strcat(name,".txt");
@@ -49,14 +50,12 @@ int main()
     		cin>>key;
 
             //Encryption char+key :
-
             for(i=0;i<strlen(data);i++)
            {
                data[i]=data[i]+key;
            }
-           //cout<<data;
-
-            file<<data;
+           
+	    file<<data;
             file.close();
             cout<<"Data has been successfully encrypted. Going back to main screen! \n"<<endl;
 
@@ -72,18 +71,22 @@ int main()
 
 			}
 			else{
-           //Decryption Block:
+				
+           //Decryption Block:				
            cout<<"tWelcome to DECRYPTION BLOCK"<<endl;
-           //Opening the file and putting the cursor in the beginning:
+				
+           //Opening the file and putting the cursor in the beginning:				
            cin.ignore();
            cout<<"Enter name of file:";
             cin>>name;
              strcat(name,".txt");
            file.open(name,ios::out|ios::in);
+				
            //Reading data from the file:
            while(!file.eof())
            {
             file.getline(data,100);
+		   
             //Decrypting char-key:
                 cout<<"Enter the passkey:";
 	    		cin>>key;
@@ -92,6 +95,7 @@ int main()
                 data[i]=data[i]-key;
             }
            }
+				
            //Overwriting existing data:
            file.seekg(0,ios::beg);
            for(i=0;i<strlen(data);i++)
@@ -113,6 +117,7 @@ int main()
 
 			}
 			else{
+				
             //To show contents of the file:
             cout<<"Enter name of file:";
             cin>>name;
