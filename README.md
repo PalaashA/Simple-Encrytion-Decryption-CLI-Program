@@ -1,5 +1,5 @@
 # Simple-Encryption-Decryption-CLI-Program
-> A simple encryption-decrytion program developed using C++
+> A simple encryption-decryption program developed using C++
 * This is a simple CLI-based encryption-decryption program developed using C++
 * The "epd2.cpp" is the final file which can create, add data to, encrypt/decrypt its data, and read data from the file
 * The program was created using Code:Blocks IDE. 
